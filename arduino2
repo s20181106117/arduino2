@@ -1,0 +1,375 @@
+//A to I
+  //".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..",
+  // J to R 
+  //".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.",
+  // S to Z
+  //"...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.." 
+void setup()                   
+{
+  Serial.begin(9600);
+  pinMode(13,OUTPUT);
+}
+void loop()                    
+{
+  char ch;
+  ch=Serial.read();
+  if(ch == 'a'||ch == 'A')//".-"
+  {
+    digitalWrite(13,HIGH); 
+    delay(500);  
+    digitalWrite(13,LOW); 
+    delay(100); 
+    digitalWrite(13, HIGH);   
+    delay(2000);                   
+    digitalWrite(13, LOW);  
+    delay(100);              
+  }
+  if(ch == 'b'||ch == 'B')//"-..."
+  {
+    digitalWrite(13,HIGH); 
+    delay(2000);  
+    digitalWrite(13,LOW); 
+    delay(100); 
+    for(int x = 0;x < 3;x++)
+    {
+      digitalWrite(13, HIGH);   
+      delay(500);                   
+      digitalWrite(13, LOW);  
+      delay(100); 
+    }  
+  }
+  if(ch == 'c'||ch == 'C')//"-.-."
+  {
+    digitalWrite(13,HIGH); 
+    delay(2000);  
+    digitalWrite(13,LOW); 
+    delay(100); 
+    digitalWrite(13, HIGH);   
+    delay(500);                   
+    digitalWrite(13, LOW);  
+    delay(100); 
+    digitalWrite(13,HIGH); 
+    delay(2000);  
+    digitalWrite(13,LOW); 
+    delay(100); 
+    digitalWrite(13, HIGH);   
+    delay(500);                   
+    digitalWrite(13, LOW);  
+    delay(100);               
+  }
+  if(ch == 'd'||ch == 'D')//"-.."
+  {
+    digitalWrite(13,HIGH); 
+    delay(2000);  
+    digitalWrite(13,LOW); 
+    delay(100); 
+    for(int x = 0;x < 2;x++)
+    {
+      digitalWrite(13, HIGH);   
+      delay(500);                   
+      digitalWrite(13, LOW);  
+      delay(100);  
+    }            
+  }
+  if(ch == 'e'||ch == 'E')//"."
+  {
+    digitalWrite(13,HIGH); 
+    delay(500);  
+    digitalWrite(13,LOW); 
+    delay(100);      
+  }
+  if(ch == 'f'||ch == 'F')//"..-."
+  {
+    for(int x = 0;x < 2;x++)
+    {
+      digitalWrite(13,HIGH); 
+      delay(500);  
+      digitalWrite(13,LOW); 
+      delay(100); 
+    }
+    digitalWrite(13, HIGH);   
+    delay(2000);                   
+    digitalWrite(13, LOW);  
+    delay(100); 
+    digitalWrite(13,HIGH); 
+    delay(500);  
+    digitalWrite(13,LOW); 
+    delay(100);              
+  }
+  if(ch == 'g'||ch == 'G')//"--."
+  {
+    for(int x = 0;x < 2;x++)
+    {
+      digitalWrite(13,HIGH); 
+      delay(2000);  
+      digitalWrite(13,LOW); 
+      delay(100);
+    }
+    digitalWrite(13, HIGH);   
+    delay(500);                   
+    digitalWrite(13, LOW);  
+    delay(100);              
+  }
+  if(ch == 'h'||ch == 'H')//"...."
+  {
+    for(int x = 0;x < 4;x++)
+    {
+      digitalWrite(13,HIGH); 
+      delay(500);  
+      digitalWrite(13,LOW); 
+      delay(100); 
+    }         
+  }
+  if(ch == 'i'||ch == 'I')//".."
+  {
+    for(int x = 0;x < 2;x++)
+    {
+      digitalWrite(13,HIGH); 
+      delay(500);  
+      digitalWrite(13,LOW); 
+      delay(100); 
+    }                      
+  }
+  if(ch == 'j'||ch == 'J')//".---"
+  {
+    digitalWrite(13,HIGH); 
+    delay(500);  
+    digitalWrite(13,LOW); 
+    delay(100); 
+    for(int x = 0;x < 3;x++)
+    {
+      digitalWrite(13,HIGH); 
+      delay(2000);  
+      digitalWrite(13,LOW); 
+      delay(100); 
+    }             
+  }
+  if(ch == 'k'||ch == 'K')//"-.-"
+  {
+    digitalWrite(13,HIGH); 
+    delay(2000);  
+    digitalWrite(13,LOW); 
+    delay(100); 
+    digitalWrite(13, HIGH);   
+    delay(500);                   
+    digitalWrite(13, LOW);  
+    delay(100); 
+    digitalWrite(13, HIGH);   
+    delay(2000);                   
+    digitalWrite(13, LOW);  
+    delay(100);                  
+  }
+  if(ch == 'l'||ch == 'L')//".-.."
+  {
+    digitalWrite(13,HIGH); 
+    delay(500);  
+    digitalWrite(13,LOW); 
+    delay(100); 
+    digitalWrite(13, HIGH);   
+    delay(2000);                   
+    digitalWrite(13, LOW);  
+    delay(100);
+    for(int x = 0;x < 2;x++)
+    {
+      digitalWrite(13,HIGH); 
+      delay(500);  
+      digitalWrite(13,LOW); 
+      delay(100); 
+    }                          
+  }
+  if(ch == 'm'||ch == 'M')//"--"
+  { 
+    for(int x = 0;x < 2;x++)
+    {
+      digitalWrite(13,HIGH); 
+      delay(2000);  
+      digitalWrite(13,LOW); 
+      delay(100); 
+    }                     
+  }
+  if(ch == 'n'||ch == 'N')//"-."
+  {
+    digitalWrite(13,HIGH); 
+    delay(2000);  
+    digitalWrite(13,LOW); 
+    delay(100); 
+    digitalWrite(13, HIGH);   
+    delay(500);                   
+    digitalWrite(13, LOW);  
+    delay(100);              
+  }
+  if(ch == 'o'||ch == 'O')//"---"
+  {
+    for(int x = 0;x < 3;x++)
+    {
+      digitalWrite(13,HIGH); 
+      delay(2000);  
+      digitalWrite(13,LOW); 
+      delay(100); 
+    }                     
+  }
+  if(ch == 'p'||ch == 'P')//".--."
+  {
+    digitalWrite(13,HIGH); 
+    delay(500);  
+    digitalWrite(13,LOW); 
+    delay(100); 
+    for(int x = 0;x < 2;x++)
+    {
+      digitalWrite(13,HIGH); 
+      delay(2000);  
+      digitalWrite(13,LOW); 
+      delay(100); 
+    } 
+    digitalWrite(13,HIGH); 
+    delay(500);  
+    digitalWrite(13,LOW); 
+    delay(100);                       
+  }
+  if(ch == 'q'||ch == 'Q')//"--.-"
+  {
+    for(int x = 0;x < 2;x++)
+    {
+      digitalWrite(13,HIGH); 
+      delay(2000);  
+      digitalWrite(13,LOW); 
+      delay(100); 
+    } 
+    digitalWrite(13,HIGH); 
+    delay(500);  
+    digitalWrite(13,LOW); 
+    delay(100); 
+    digitalWrite(13, HIGH);   
+    delay(2000);                   
+    digitalWrite(13, LOW);  
+    delay(100);              
+  }
+  if(ch == 'r'||ch == 'R')//".-."
+  {
+    digitalWrite(13,HIGH); 
+    delay(500);  
+    digitalWrite(13,LOW); 
+    delay(100); 
+    digitalWrite(13, HIGH);   
+    delay(2000);                   
+    digitalWrite(13, LOW);  
+    delay(100); 
+    digitalWrite(13,HIGH); 
+    delay(500);  
+    digitalWrite(13,LOW); 
+    delay(100);              
+  }
+  if(ch == 's'||ch == 'S')//"..."
+  {
+   for(int x = 0;x < 3;x++)
+    {
+      digitalWrite(13,HIGH); 
+      delay(500);  
+      digitalWrite(13,LOW); 
+      delay(100); 
+    }                
+  }
+  if(ch == 't'||ch == 'T')//"-"
+  { 
+    digitalWrite(13, HIGH);   
+    delay(2000);                   
+    digitalWrite(13, LOW);  
+    delay(100);              
+  }
+  if(ch == 'u'||ch == 'U')//"..-"
+  {
+    for(int x = 0;x < 2;x++)
+    {
+      digitalWrite(13,HIGH); 
+      delay(500);  
+      digitalWrite(13,LOW); 
+      delay(100); 
+    }  
+    digitalWrite(13, HIGH);   
+    delay(2000);                   
+    digitalWrite(13, LOW);  
+    delay(100);              
+  }
+  if(ch == 'v'||ch == 'V')//"...-"
+  {
+    for(int x = 0;x < 3;x++)
+    {
+      digitalWrite(13,HIGH); 
+      delay(500);  
+      digitalWrite(13,LOW); 
+      delay(100); 
+    }  
+    digitalWrite(13, HIGH);   
+    delay(2000);                   
+    digitalWrite(13, LOW);  
+    delay(100);              
+  }
+  if(ch == 'w'||ch == 'W')//".--"
+  {
+    digitalWrite(13,HIGH); 
+    delay(500);  
+    digitalWrite(13,LOW); 
+    delay(100); 
+    for(int x = 0;x < 2;x++)
+    {
+      digitalWrite(13,HIGH); 
+      delay(2000);  
+      digitalWrite(13,LOW); 
+      delay(100); 
+    }             
+  }
+  if(ch == 'x'||ch == 'X')//"-..-"
+  {
+    digitalWrite(13,HIGH); 
+    delay(2000);  
+    digitalWrite(13,LOW); 
+    delay(100);
+    for(int x = 0;x < 2;x++)
+    {
+      digitalWrite(13,HIGH); 
+      delay(500);  
+      digitalWrite(13,LOW); 
+      delay(100); 
+    }  
+    digitalWrite(13, HIGH);   
+    delay(2000);                   
+    digitalWrite(13, LOW);  
+    delay(100);              
+  }  
+  if(ch == 'y'||ch == 'Y')//"-.--"
+  {
+    digitalWrite(13,HIGH); 
+    delay(2000);  
+    digitalWrite(13,LOW); 
+    delay(100);
+    digitalWrite(13,HIGH); 
+    delay(500);  
+    digitalWrite(13,LOW); 
+    delay(100);
+    for(int x = 0;x < 2;x++)
+    {
+      digitalWrite(13,HIGH); 
+      delay(2000);  
+      digitalWrite(13,LOW); 
+      delay(100); 
+    }                  
+  }  
+  if(ch == 'z'||ch == 'Z')//"--.."
+  {
+    for(int x = 0;x < 2;x++)
+    {
+      digitalWrite(13,HIGH); 
+      delay(2000);  
+      digitalWrite(13,LOW); 
+      delay(100); 
+    } 
+    for(int x = 0;x < 2;x++)
+    {
+      digitalWrite(13,HIGH); 
+      delay(500);  
+      digitalWrite(13,LOW); 
+      delay(100); 
+    }              
+  }                    
+ delay(5000);
+}
